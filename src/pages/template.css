@@ -6,8 +6,11 @@ main {
 }
 .page-title {
     text-align: center;
-    padding: 20px 0 42px 0;
     color: #6a4b7a;
+}
+h1{
+    margin: 0;
+    padding: 0;
 }
 .float-left {
     text-align: left;
@@ -18,11 +21,27 @@ main {
 .p-0{
     padding: 0;
 }
+.pl-0-important{
+    padding-left: 0 !important;
+}
+.m-12{
+    margin: 12px;
+}
 .p-12{
     padding: 12px;
 }
 .p-16{
     padding: 16px;
+}
+.text-center{
+    text-align: center;
+}
+/** Color **/
+.color-dark-pink{
+    color: var(--dark-pink);
+}
+.color-light-pink{
+    color: var(--light-pink);
 }
 .color-dark-mauve{
     color: var(--dark-mauve);
@@ -30,12 +49,21 @@ main {
 .color-light-mauve{
     color: var(--light-mauve);
 }
+/** Color **/
+/** Background **/
+.background-dark-pink{
+    background-color: var(--dark-pink);
+}
+.background-light-pink{
+    background-color: var(--light-pink);
+}
 .background-dark-mauve{
     background-color: var(--dark-mauve);
 }
 .background-light-mauve{
     background-color: var(--light-mauve);
 }
+/** Background **/
 .btn{
     border: none;
     color: white;
@@ -47,4 +75,10 @@ main {
 }
 .btn.background-light-mauve:hover{
     background-color: var(--dark-mauve);
+}
+.margin-center{
+    margin: 0 auto;
+}
+.max-w-300{
+    max-width: 300px;
 }

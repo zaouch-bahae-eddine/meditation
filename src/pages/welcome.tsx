@@ -5,15 +5,17 @@ import { Link } from "react-router-dom";
 function Welcome() {
   return (
     <main>
-        <h1 className="page-title">Welcome</h1>
-        <WomenOrder />
+        <h1 className="color-dark-pink text-center">Hi !</h1>
+        <div className="p-12">
+            <WomenOrder />
+        </div>
         <div className="app-description">
-            <h1>BEBIRD</h1>
+            <h1 className="color-dark-pink text-center">BEBIRD</h1>
             <p>Your app to meditate and track your progress</p>
         </div>
         <div className="button-container">
-            <Link className="btn btn-login" to="/login">Login</Link>
-            <Link className="btn btn-login btn-register" to="#">Regiser</Link>
+            <Link className="btn btn-login p-12" to="/login">Login</Link>
+            <Link className="btn btn-login p-12" to="#">Regiser</Link>
         </div>
     </main>
   );
