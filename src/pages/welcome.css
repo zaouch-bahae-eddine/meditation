@@ -1,7 +1,11 @@
 .app-description{
     text-align: center;
-    padding: 18px 12px;
     color: #6a4b7a;
+}
+.app-description p {
+    padding: 0 16px;
+    font-weight: bold;
+    font-size: 1.1em;
 }
 .button-container{
     display: flex;

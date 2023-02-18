@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Welcome() {
   return (
     <main>
-        <h1 className="color-dark-pink text-center">Hi !</h1>
+        <h1 className="color-dark-pink text-center p-12">Hi !</h1>
         <div className="p-12">
             <WomenOrder />
         </div>
@@ -13,10 +13,10 @@ function Welcome() {
             <h1 className="color-dark-pink text-center">BEBIRD</h1>
             <p>Your app to meditate and track your progress</p>
         </div>
-        <div className="button-container">
+        <form className="button-container p-12">
             <Link className="btn btn-login p-12" to="/login">Login</Link>
             <Link className="btn btn-login p-12" to="#">Regiser</Link>
-        </div>
+        </form>
     </main>
   );
 }
