@@ -1,0 +1,61 @@
+.st0{fill:#C176B1;}
+.st1{fill:#AA57A2;}
+.st2{fill:#A474B2;}
+.st3{fill:#9263AA;}
+.st4{fill:#D175AF;}
+.st5{fill:#C361A5;}
+.st6{fill:#7C53A2;}
+.st7{fill:#974C97;}
+.st8{fill:#B4519E;}
+.st9{fill:#7C52A1;}
+.st10{fill:#9C74B3;}
+.st11{fill:#954A95;}
+.st12{fill:#B658A2;}
+.st13{fill:#A6A636;}
+.st14{fill:#923C2C;}
+.st15{fill:#8F8B34;}
+.st16{fill:#BCB832;}
+.st17{fill:#76281D;}
+.st18{fill:#A94933;}
+.st19{fill:#D04D36;}
+.st20{fill:#EDDEBF;}
+.st21{fill:#7E2F27;}
+.st22{fill:#A43823;}
+.st23{fill:#C23E27;}
+.st24{fill:#A71D3B;}
+.st25{fill:#BB2747;}
+.st26{fill:#D02E4B;}
+.st27{fill:#FBAE32;}
+.st28{fill:#F58F1F;}
+.st29{fill:#F9A026;}
+.st30{fill:#F8BF31;}
+.st31{fill:#FFD06D;}
+.st32{fill:#E4D0AC;}
+.st33{fill:#D6BC97;}
+.st34{fill:#F8A27E;}
+.st35{fill:#F5875E;}
+.st36{fill:#F37148;}
+.st37{fill:#EB4F44;}
+.st38{display:none;}
+.st39{display:inline;fill:#EDDEBF;}
+/*in cvg tag style="enable-background:new 0 0 340 330;" */
+.person{
+    width: 90%;
+    margin: 0 auto;
+}
+#Layer_1{
+    display: block;
+    width: 100%;
+}
+@keyframes upDownSmooth {
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(-10px);
+    }
+}
+
+#Layer_1 #Person{
+    animation: upDownSmooth 3s linear infinite alternate ;
+}

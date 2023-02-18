@@ -1,0 +1,23 @@
+.input-element{
+    display: flex;
+    flex-direction: column;
+}
+.input-element label{
+    margin-bottom: 8px;
+    color: var(--light-mauve);
+    font-weight: 600;
+}
+.input-element input {
+    padding: 12px 8px;
+    border-radius: 12px;
+    box-shadow: none;
+    color: var(--light-mauve);
+    border-color: var(--light-mauve);
+    border-width: 1px;
+    margin-bottom: 16px;
+    font-size: 1.3em;
+}
+.input-element input:focus-visible{
+    border-color: var(--dark-mauve);
+    border-width: 2px;
+}
