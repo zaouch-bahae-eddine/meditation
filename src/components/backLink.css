@@ -1,0 +1,16 @@
+.back-link{
+    position: absolute;
+    top: 12px;
+    left: 0px;
+    font-size: 1.5em;
+    background-color: var(--dark-mauve);
+    border-radius: 12px;
+    color: white;
+}
+.back-link a {
+    color: white;
+    display: block;
+    padding: 2px;
+    width: 40px;
+    text-align: center;
+}

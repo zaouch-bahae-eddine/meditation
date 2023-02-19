@@ -14,7 +14,7 @@
     color: var(--light-mauve);
     border-color: var(--light-mauve);
     border-width: 1px;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     font-size: 1.3em;
 }
 .input-element input:focus-visible{

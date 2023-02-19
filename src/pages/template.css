@@ -2,6 +2,8 @@ main {
     width: 100%;
     max-width: 350px;
     margin: 0 auto;
+    position: relative;
+    /* border: 1px solid; */
 }
 .page-title {
     text-align: center;
@@ -23,8 +25,20 @@ h1{
 .pl-0-important{
     padding-left: 0 !important;
 }
+.pt-0-important{
+    padding-top: 0 !important;
+}
+.pb-0-important{
+    padding-bottom: 0 !important;
+}
 .m-12{
     margin: 12px;
+}
+.mb-12{
+    margin-bottom: 12px;
+}
+.mt-12{
+    margin-top: 12px;
 }
 .p-12{
     padding: 12px;
@@ -70,7 +84,6 @@ h1{
     width: 100%;
     border-radius: 12px;
     transition: background-color 0.3s;
-    margin-top: 12px;
 }
 .btn.background-light-mauve:hover{
     background-color: var(--dark-mauve);
