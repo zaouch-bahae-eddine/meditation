@@ -1,14 +1,14 @@
 import { BackLink } from "../components/backLink";
 import { ButtonElement } from "../components/buttonElement";
 import { InputElement } from "../components/inputElement";
-import { WomenOrder } from "../components/persons-item/womenOrder";
+import { WomenLogin } from "../components/persons-item/womenLogin";
 
 export const Login = () => {
     return(
         <main>
             <BackLink path="/"/>
             <div className="max-w-300 margin-center p-12">
-                <WomenOrder />
+                <WomenLogin />
             </div>
             <h1 className="pl-0-important p-16 color-dark-mauve">Login</h1>
             <form>

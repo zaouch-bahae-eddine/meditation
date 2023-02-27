@@ -1,0 +1,51 @@
+#Layer_2 .st0{fill:#413548;}
+#Layer_2 .st1{fill:#362B3D;}
+#Layer_2 .st2{fill:#FFFFFF;}
+#Layer_2 .st3{fill:#D23B36;}
+#Layer_2 .st4{fill:#A24B2F;}
+#Layer_2 .st5{fill:#91442B;}
+#Layer_2 .st6{fill:#E1AF72;}
+#Layer_2 .st7{fill:#E6C787;}
+#Layer_2 .st8{fill:#F5DAA0;}
+#Layer_2 .st9{fill:#FAEBCC;}
+#Layer_2 .st10{fill:#A7A738;}
+#Layer_2 .st11{fill:#8E8C34;}
+#Layer_2 .st12{fill:#87559B;}
+#Layer_2 .st13{fill:#744B8B;}
+#Layer_2 .st14{fill:#9F67AB;}
+#Layer_2 .st15{fill:#D1C4AF;}
+#Layer_2 .st16{fill:#ECE0CF;}
+#Layer_2 .st17{fill:#A3877B;}
+#Layer_2 .st18{fill:#F8A27E;}
+#Layer_2 .st19{fill:#F5875E;}
+#Layer_2 .st20{fill:#EDD2A4;}
+#Layer_2 .st21{fill:#F37148;}
+#Layer_2 .st22{fill:#C094C3;}
+#Layer_2 .st23{fill:#EB4F44;}
+#Layer_2 .st24{fill:#8E3F2E;}
+#Layer_2 .st25{fill:#C14D5C;}
+#Layer_2 .st26{fill:#F5AA66;}
+#Layer_2 .st27{fill:#9C3849;}
+#Layer_2 .st28{fill:#E7CA9A;}
+#Layer_2 .st29{fill:#E5DBC8;}
+#Layer_2 .st30{fill:#E1D4C4;}
+#Layer_2 .st31{fill:#BDAF9A;}
+#Layer_2 .st32{fill:#67323A;}
+#Layer_2 .st33{fill:#4F252D;}
+#Layer_2 .st34{fill:#93515E;}
+#Layer_2{
+    display: block;
+    width: 100%;
+}
+@keyframes upDownSmooth {
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(-10px);
+    }
+}
+
+#Layer_2 #Person{
+    animation: upDownSmooth 3s linear infinite alternate ;
+}
