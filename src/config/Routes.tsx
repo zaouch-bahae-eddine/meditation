@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 //Pages
 import { Login } from '../pages/login'
+import Profile from '../pages/profile';
 import { SignUp } from '../pages/signUp'
 import Welcome from '../pages/welcome'
 
@@ -14,6 +15,7 @@ export const RoutesElement = () =>{
                 <Route path="/" element={<Welcome/>} />
                 <Route path="/login" element={<Login/>} />
                 <Route path="/sign-up" element={<SignUp/>} />
+                <Route path="/profile" element={<Profile/>} />
             </Routes>
         </Router>
     )

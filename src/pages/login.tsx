@@ -5,6 +5,8 @@ import { WomenLogin } from "../components/persons-item/womenLogin"
 import { useForm } from "react-hook-form"
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { login } from '../services/auth-service'
+import { useNavigate } from 'react-router-dom'
 
 type Inputs = {
     email: string;
@@ -12,16 +14,29 @@ type Inputs = {
 };
 
 export const Login = () => {
+    const navigate = useNavigate()
     const shema = yup.object().shape({
         email: yup.string().email('Not correcte format email').required(),
         password: yup.string().required().min(3, '3 Chars is the min length possible')
     })
 
-    const {register, handleSubmit, formState: {errors}} = useForm<Inputs>({
+    const {register, handleSubmit, formState: {errors}, setError} = useForm<Inputs>({
         resolver:  yupResolver(shema)
     })
-    const onSubmit = (data: Inputs) => {
-        console.log(data)
+    const onSubmit = async (data: Inputs) => {
+        login(data.email, data.password)
+        .then(currentUser => {
+            navigate('/profile')
+        })
+        .catch(errors => {
+            if(errors.response.status == 404){
+                //email(user) not founded
+                setError("email", {type: 'emailNotFounde', message:"email not find"})
+            } else if(errors.response.status == 401){
+                //Password incorrect
+                setError("password", {type: 'passwordNotCorrect', message:"incorrect password"})
+            }
+        })
     }
 
     return(
