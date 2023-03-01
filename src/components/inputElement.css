@@ -21,3 +21,10 @@
     border-color: var(--dark-mauve);
     border-width: 2px;
 }
+.error-msg{
+    color: #b61414;
+    font-weight: 600;
+    margin: -5px 0 5px 6px;
+    display: flex;
+    align-items: center;
+}
