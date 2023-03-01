@@ -17,10 +17,10 @@ export const Login = () => {
         password: yup.string().required().min(3, '3 Chars is the min length possible')
     })
 
-    const {register, handleSubmit, formState: {errors}} = useForm({
+    const {register, handleSubmit, formState: {errors}} = useForm<Inputs>({
         resolver:  yupResolver(shema)
     })
-    const onSubmit = (data: any) => {
+    const onSubmit = (data: Inputs) => {
         console.log(data)
     }
 
