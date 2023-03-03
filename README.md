@@ -5,4 +5,5 @@ This project was bootstrapped with [Meditation App](https://main--incandescent-p
 
 + **NodeJS for Rest API Back-end**
 + **ReactJS for API Front-end**
++ **Typescript**
 + **JWT authentication**
