@@ -14,7 +14,7 @@ interface TimerPickerInterface {
 }
 
 function TimerPicker() {
-    const currentUser = useCurrentUser()
+    //const currentUser = useCurrentUser()
     const {initTimer, currentTime, startTimer, isActive } = useTimer()
     const [timer, setTimer] = useState<TimerPickerInterface>({
       minDouzen: 0,
@@ -29,22 +29,38 @@ function TimerPicker() {
     const handleMinDouzenInputChange = (event: ChangeEvent) => {
       const target = event.target as HTMLInputElement;
       target.value = target.value.slice(-1)
-      setTimer({...timer, minDouzen: parseInt(String(target.value))})
+      setTimer(() => {
+        const newTimer = {...timer, minDouzen: parseInt(String(target.value))}
+        initTimer(newTimer)
+        return newTimer
+      })
     }
     const handleMinUnitInputChange = (event: ChangeEvent) => {
       const target = event.target as HTMLInputElement;
       target.value = target.value.slice(-1)
-      setTimer({...timer, minUnit: parseInt(String(target.value))})
+      setTimer(() => {
+        const newTimer = {...timer, minUnit: parseInt(String(target.value))}
+        initTimer(newTimer)
+        return newTimer
+      })
     }
     const handleSecDouzenInputChange = (event: ChangeEvent) => {
       const target = event.target as HTMLInputElement;
       target.value = target.value.slice(-1)
-      setTimer({...timer, secDouzen: parseInt(String(target.value))})
+      setTimer(() => {
+        const newTimer = {...timer, secDouzen: parseInt(String(target.value))}
+        initTimer(newTimer)
+        return newTimer
+      })
     }
     const handleSecUnitInputChange = (event: ChangeEvent) => {
       const target = event.target as HTMLInputElement;
       target.value = target.value.slice(-1)
-      setTimer({...timer, secUnit: parseInt(String(target.value))})
+      setTimer(() => {
+        const newTimer = {...timer, secUnit: parseInt(String(target.value))}
+        initTimer(newTimer)
+        return newTimer
+      })
     }
   return (
     <main>
