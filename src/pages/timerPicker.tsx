@@ -5,7 +5,8 @@ import { ButtonElement } from "../components/buttonElement";
 import { useCurrentUser } from "../hooks/useCurrentUser";
 import { useState, ChangeEvent } from 'react'
 import useTimer from "../hooks/useTimer";
-
+import SetTimer from "../components/setTimer";
+import '../components/setTimer.css'
 interface TimerPickerInterface {
   minDouzen?: number,
   minUnit?: number,
@@ -63,7 +64,8 @@ function TimerPicker() {
       })
     }
   return (
-    <main>
+    <main id="main">
+
       <h1 className="color-dark-pink text-center p-12">Let's Meditate</h1>
       <div className="timer-display">
         {
@@ -78,17 +80,13 @@ function TimerPicker() {
       <div className="app-description">
           <p className="color-dark-pink text-center">Your meditation helps evry one around you !</p>
       </div>
-      <form className="button-container p-12">
-        min-douzen
-        <input type="number" className="min-douzen" autoFocus onChange={(event) => handleMinDouzenInputChange(event)}/>
-        min-uint
-        <input type="number" className="min-unit" onChange={(event) => handleMinUnitInputChange(event)}/>
-        sec-douzen
-        <input type="number" className="sec-douzen" onChange={(event) => handleSecDouzenInputChange(event)}/>
-        sec-unit
-        <input type="number" className="sec-unit" onChange={(event) => handleSecUnitInputChange(event)}/>
-        <ButtonElement onClick={handleSubmit} type="button" id="submit-login" label="Save" class={['background-light-mauve', 'p-16', 'mt-12']} />
-      </form>
+      <SetTimer 
+        handleMinDouzenInputChange={handleMinDouzenInputChange}
+        handleMinUnitInputChange={handleMinUnitInputChange}
+        handleSecDouzenInputChange={handleSecDouzenInputChange}
+        handleSecUnitInputChange={handleSecUnitInputChange} 
+        handleSubmit={handleSubmit} 
+      />
     </main>
   );
 }

@@ -30,7 +30,6 @@ const useTimer = () => {
     }
 
     const startTimer = () =>  {
-      console.log('Start', currentTime)
 
       if((currentTime.getMinutes() > 0 || currentTime.getSeconds() > 0)){
         setIsActive(true)
