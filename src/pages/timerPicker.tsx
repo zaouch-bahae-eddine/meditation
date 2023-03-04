@@ -4,7 +4,7 @@ import "./template.css";
 import { ButtonElement } from "../components/buttonElement";
 import { useCurrentUser } from "../hooks/useCurrentUser";
 import { useState, ChangeEvent } from 'react'
-import { Timer } from "../components/timer";
+import useTimer from "../hooks/useTimer";
 
 interface TimerPickerInterface {
   minDouzen?: number,
@@ -15,7 +15,7 @@ interface TimerPickerInterface {
 
 function TimerPicker() {
     const currentUser = useCurrentUser()
-    const [start, setStart] = useState(false)
+    const {initTimer, currentTime, startTimer, isActive } = useTimer()
     const [timer, setTimer] = useState<TimerPickerInterface>({
       minDouzen: 0,
       minUnit: 0,
@@ -23,8 +23,8 @@ function TimerPicker() {
       secUnit: 0
     })
     const handleSubmit = () => {
-      if(timer?.minDouzen || timer?.minUnit || timer?.secDouzen || timer?.secUnit)
-        setStart(true)
+      initTimer(timer)
+      startTimer()
     }
     const handleMinDouzenInputChange = (event: ChangeEvent) => {
       const target = event.target as HTMLInputElement;
@@ -49,7 +49,13 @@ function TimerPicker() {
   return (
     <main>
       <h1 className="color-dark-pink text-center p-12">Let's Meditate</h1>
-        {start ? <Timer timer={timer} setStart={setStart} /> : ''}
+      <div className="timer-display">
+        {
+          isActive ?
+            (currentTime.getMinutes() || '00') +':' + (currentTime.getSeconds() || '00')
+          : 'pick Your time'
+        }
+      </div>
       <div className="p-12">
           <WomenOrder />
       </div>
