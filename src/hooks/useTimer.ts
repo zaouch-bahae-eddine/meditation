@@ -11,7 +11,7 @@ interface TimerPickerInterface {
 
 const useTimer = () => {
     const initialTime = new Date("1970-01-01T" + "00:00:00")
-    let [currentTime, setCurrentTime] = useState<Date>(initialTime)
+    const [currentTime, setCurrentTime] = useState<Date>(initialTime)
     const [isActive, setIsActive] = useState(false)
     const [finished, setFinished] = useState(true)
     const chronoRef = useRef<any>(null)
