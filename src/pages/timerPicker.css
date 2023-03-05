@@ -2,10 +2,38 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 16px;
+}
+.buttons-timer-container{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
 }
 .buttons-timer-bottom.hidden{
     display: none;
 }
 .buttons-timer-bottom button{
     margin: 5px;
+}
+.timer-display {
+    text-align: center;
+    color: var(--dark-pink);
+    font-size: 1.5em;
+    font-weight: 500;
+    padding: 16px;
+
+}
+.timer-display.active{
+    animation: activeTimer 2s infinite alternate;
+}
+@keyframes activeTimer {
+    from {
+        color: var(--dark-pink);
+        opacity: 1;
+    }
+    to {
+        color: var(--light-pink);
+        opacity: 0.3;
+    }
 }
