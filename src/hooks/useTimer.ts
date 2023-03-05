@@ -1,6 +1,5 @@
 
 import { useRef, useState } from "react";
-import { finished } from "stream";
 
 interface TimerPickerInterface {
     minDouzen?: number,
@@ -33,13 +32,12 @@ const useTimer = () => {
 
       if((currentTime.getMinutes() > 0 || currentTime.getSeconds() > 0)){
         setIsActive(true)
-
+        setFinished(false)
         chronoRef.current = setInterval(() => {
           setCurrentTime((currentTime) => {
             if((currentTime.getMinutes() > 0 || currentTime.getSeconds() > 0)){
               return new Date(currentTime.getTime() - initialTime.getTime() - 1000)
             }
-            console.log('FInished')
             setFinished(true)
             stopTimer()
             return initialTime
@@ -52,9 +50,13 @@ const useTimer = () => {
       console.log('Stop')
       setIsActive(false)
       clearInterval(chronoRef.current)
+    }
+    const cancelTimer = () => {
+      setIsActive(false)
+      setFinished(true)
+      clearInterval(chronoRef.current)
       setCurrentTime(initialTime)
     }
-
-    return {initTimer, startTimer, stopTimer, currentTime, isActive, finished}
+    return {initTimer, startTimer, stopTimer, currentTime, isActive, finished, cancelTimer}
 }
 export default useTimer

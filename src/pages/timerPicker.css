@@ -1,0 +1,11 @@
+.buttons-timer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.buttons-timer-bottom.hidden{
+    display: none;
+}
+.buttons-timer-bottom button{
+    margin: 5px;
+}
