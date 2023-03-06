@@ -92,7 +92,9 @@ function TimerPicker() {
           : 'Pick your time 🙏'
         }
       </div>
-      <div className="p-12">
+      <div className="p-12 postion-relative">
+        <div className={isActive ? "person-background": ""}></div>
+        <div className={isActive ? "person-background item-2": ""}></div>
           <WomenOrder />
       </div>
       <div className="app-description">

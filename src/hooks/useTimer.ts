@@ -1,5 +1,6 @@
 
 import { useRef, useState } from "react";
+import Meditation from '../services/meditation-service'
 
 interface TimerPickerInterface {
     minDouzen?: number,
@@ -11,6 +12,7 @@ interface TimerPickerInterface {
 const useTimer = () => {
     const initialTime = new Date("1970-01-01T" + "00:00:00")
     const [currentTime, setCurrentTime] = useState<Date>(initialTime)
+    const [duration, setDuration] = useState(0)
     const [isActive, setIsActive] = useState(false)
     const [finished, setFinished] = useState(true)
     const chronoRef = useRef<any>(null)
@@ -24,8 +26,9 @@ const useTimer = () => {
         '' + (timer?.secUnit || '0')
         : ''
       )
-      
-      setCurrentTime(new Date("1970-01-01T" + "00:" + ms))
+      const msToDate = new Date("1970-01-01T" + "00:" + ms)
+      setCurrentTime(msToDate)
+      setDuration(msToDate.getMinutes()* 60 + msToDate.getSeconds())
     }
 
     const startTimer = () =>  {
@@ -40,6 +43,7 @@ const useTimer = () => {
             }
             setFinished(true)
             stopTimer()
+            Meditation.addDuration(duration)
             return initialTime
           })
         }, 1000)

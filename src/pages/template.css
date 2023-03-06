@@ -92,3 +92,7 @@ h1{
 .max-w-300{
     max-width: 300px;
 }
+/** Position **/
+.postion-relative{
+    position: relative;
+}
