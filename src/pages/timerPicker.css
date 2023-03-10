@@ -1,0 +1,71 @@
+.buttons-timer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px;
+}
+.buttons-timer-container{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 16px;
+}
+.buttons-timer-bottom.hidden{
+    display: none;
+}
+.buttons-timer-bottom button{
+    margin: 5px;
+}
+.timer-display {
+    text-align: center;
+    color: var(--dark-pink);
+    font-size: 1.5em;
+    font-weight: 500;
+    padding: 16px 22px
+
+}
+.timer-display.active{
+    animation: activeTimer 2s infinite alternate;
+}
+@keyframes activeTimer {
+    from {
+        color: var(--dark-pink);
+        opacity: 1;
+    }
+    to {
+        color: var(--light-pink);
+        opacity: 0.3;
+    }
+}
+.person-background{
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: -1;
+    border-radius: 100%;
+    border: 1px solid #9263aa;
+    top: 50%;
+    left: 50%;
+    box-shadow: inset #9263aa 0 0 12px 12px;
+    animation: circleBackground 8s infinite;
+}
+.item-2{
+    animation: circleBackground 8s infinite 4s;
+}
+
+@keyframes circleBackground {
+    from {
+        width: 0;
+        height: 0;
+        opacity: 0.6;
+        top: 50%;
+        left: 50%;
+    }
+    to {
+        width: 340px;
+        height: 340px;
+        opacity: 0;
+        top: 0%;
+        left: 0%;
+    }
+}

@@ -1,0 +1,47 @@
+.popup-style {
+    position: absolute;
+    left: 0;
+    top: calc(100vh - 240px);
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #e2e3fb;
+    border-radius: 40px 40px 0 0;
+    padding: 0px 0 12px 0px;
+    box-shadow: 0 10px 20px 0px;
+    transition: top ease-out 0.3s;
+}
+.popup-style.hidden{
+    top:calc(100vh + 10px);
+}
+
+.popup-header{
+    text-align: center;
+    font-size: 1.05em;
+    margin: 6px 0 20px 0;
+    color: var(--dark-pink)
+}
+.time-inputs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    margin: 0 auto;
+}
+.time-inputs input{
+    width: 20px;
+    font-size: 3.8em;
+    padding: 6px 12px;
+    width: 35px;
+    margin: 5px;
+    background-color: white;
+    border: none;
+    color: var(--dark-pink);
+}
+.time-inputs input:focus-visible, .time-inputs input:active{
+    outline-color: var(--light-pink);
+    outline-style: solid;
+}
+.semicolomn-breack{
+    font-size: 2.2em;
+    font-weight: 600;
+}

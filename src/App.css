@@ -1,0 +1,9 @@
+.App{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    position: relative;
+    max-height: 100vh;
+    overflow: hidden;
+}

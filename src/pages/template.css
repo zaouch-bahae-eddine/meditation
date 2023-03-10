@@ -1,9 +1,7 @@
 main {
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     max-width: 350px;
-    margin: 0 auto;
-    position: relative;
-    /* border: 1px solid; */
 }
 .page-title {
     text-align: center;
@@ -93,4 +91,8 @@ h1{
 }
 .max-w-300{
     max-width: 300px;
+}
+/** Position **/
+.postion-relative{
+    position: relative;
 }
